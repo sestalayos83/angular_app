@@ -1,5 +1,7 @@
-####Crear nuevo proyecto
+#### Crear nuevo proyecto
+
 `$ ng new ahorcado`
 
-####Arrancar servidor
+#### Arrancar servidor
+
 `$ ng serve -o`
