@@ -13,9 +13,27 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row" *ngIf="gano">
   <div class="col text-center">
-    <button (click)="comprobar(letra)" *ngFor="let letra of letras" class="btn btn-primary">
+    <h1>¡¡Felicidades, ganaste!!</h1>
+    <h4>:D</h4>
+  </div>
+</div>
+
+<div class="row" *ngIf="perdio">
+  <div class="col text-center">
+    <h1>Lo siento, perdiste :'(</h1>
+    <h4>La solución era: {{ palabra }}</h4>
+  </div>
+</div>
+
+<div class="row" *ngIf="!gano && !perdio">
+  <div class="col text-center">
+    <button
+      (click)="comprobar(letra)"
+      *ngFor="let letra of letras"
+      class="btn btn-primary"
+    >
       {{ letra }}
     </button>
   </div>
